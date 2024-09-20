@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'mario' ;
+    src:url(images/SuperMario256.ttf);
+}
+@font-face{
+    font-family: 'mono';
+    src:url(images/VCR_OSD_MONO_1.001.ttf);
+}
+body {
+    margin : auto;
+    text-align: center;
+    color: rgb(19, 12, 12);
+    font-family : mono;  
+    text-shadow: rgb(34, 32, 32) 1px 1px;
+}
+h1 {
+    color: rgb(187, 46, 46);
+    font-family: mario;
+    text-shadow: rgb(32, 30, 71) 4px 4px;
+}
+#replay{
+    display : inline-block;
+}
+#world{
+    display: inline-block;
+    border-radius: 30px;
+}
+
+.square {
+    height: 30px;
+    width: 30px;
+}
+.mur {
+    background-color: rgb(136, 95, 61);
+    background-image: url(images/wall.png);
+}
+
+.ligne {
+    display: flex;
+}
+
+.sol {
+    background-color: rgb(166, 123, 207);
+    background-image: url(images/ground.png);
+}
+
+.cible {
+    background-color: rgb(233, 27, 79);
+    background-image: url(images/target.png);
+}
+
+.boite {
+    background-color: rgb(148, 206, 94);
+    background-image: url("images/box.png");
+}
+
+.boite.cible {
+    background-color: rgb(139, 187, 219);
+    background-image: url(images/box-on-target.png);
+}
+
+.joueur {
+    background-color: rgb(226, 106, 37);
+    background-image: url("images/player-front.png");
+}
+
+.joueurL{
+    animation : left 0.75s steps(2, jump-none) infinite;
+}
+@keyframes left {
+    from{
+    background-image : url("images/player-left.png");
+    }to{
+        background-image: url("images/player-left2.png");
+    }
+}
+
+.joueurR{
+    animation : right 0.75s steps(2, jump-none) infinite;
+}
+@keyframes right {
+    from{
+        background-image: url("images/player-right.png");
+    }to{
+        background-image: url("images/player-right2.png");
+    }
+
+}
+.joueurUp{
+    animation : up 0.75s steps(2, jump-none) infinite;
+}
+@keyframes up {
+    from{
+        background-image: url("images/player-up.png") ;
+    }to{
+        background-image: url("images/player-up2.png");
+    }
+}
+.joueurDown{
+    animation : down 0.75s steps(2, jump-none) infinite;
+}
+@keyframes down{
+    from{
+        background-image: url("images/player-front.png");
+    }to{
+        background-image: url("images/player-front2.png");
+    }
+}
+
+.hidden {
+    display : none;
+}
+
